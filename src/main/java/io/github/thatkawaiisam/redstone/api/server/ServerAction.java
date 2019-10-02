@@ -4,6 +4,7 @@ public enum ServerAction {
 
     ADD,
     DELETE,
-    STATE_CHANGE
+    STATE_CHANGE,
+    COMMAND
 
 }

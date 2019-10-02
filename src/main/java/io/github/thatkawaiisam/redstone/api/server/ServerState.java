@@ -16,6 +16,12 @@ public enum ServerState {
         this.ordinal = ordinal;
     }
 
+    /**
+     * Gets the ServerState from an integer.
+     *
+     * @param ordinal of ServerState.
+     * @return ServerState based on the ordinal.
+     */
     public static ServerState getFromOrdinal(int ordinal) {
         return Arrays.stream(ServerState.values())
                 .filter(serverState -> serverState.ordinal == ordinal)

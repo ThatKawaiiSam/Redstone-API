@@ -20,6 +20,11 @@ public class RedstoneServer {
         this.data = new ServerData();
     }
 
+    /**
+     * Compares current time against the start time of the RedstoneServer.
+     *
+     * @return uptime of Redstone server.
+     */
     public long getUptime() {
         return System.currentTimeMillis() - startTime;
     }
