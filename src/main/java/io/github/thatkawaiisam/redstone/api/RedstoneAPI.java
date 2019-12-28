@@ -4,6 +4,7 @@ import io.github.thatkawaiisam.redstone.api.server.RedstoneServer;
 import io.github.thatkawaiisam.redstone.api.server.ServerState;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public abstract class RedstoneAPI {
 
@@ -11,6 +12,7 @@ public abstract class RedstoneAPI {
 
     public RedstoneAPI() {
         apiInstance = this;
+        System.out.println("[Redstone] API has now been loaded.");
     }
 
     public static RedstoneAPI INSTANCE() {
