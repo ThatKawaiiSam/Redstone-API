@@ -12,6 +12,11 @@ public enum ServerState {
 
     @Getter private int ordinal;
 
+    /**
+     * Server State of Redstone Server.
+     *
+     * @param ordinal state.
+     */
     ServerState(int ordinal){
         this.ordinal = ordinal;
     }

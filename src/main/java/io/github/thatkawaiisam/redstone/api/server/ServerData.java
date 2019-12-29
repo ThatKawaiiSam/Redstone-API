@@ -16,7 +16,7 @@ public class ServerData {
     private Set<UUID> whitelistedPlayers;
 
     /**
-     *
+     * Server Data class.
      */
     public ServerData() {
         this.onlinePlayers = 0;
