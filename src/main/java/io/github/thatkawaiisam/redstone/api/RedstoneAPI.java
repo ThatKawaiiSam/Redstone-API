@@ -10,11 +10,19 @@ public abstract class RedstoneAPI {
 
     private static RedstoneAPI apiInstance;
 
+    /**
+     * Redstone API.
+     */
     public RedstoneAPI() {
         apiInstance = this;
         System.out.println("[Redstone] API has now been loaded.");
     }
 
+    /**
+     * Gets an instance of the Redstone API.
+     *
+     * @return instance if it is loaded.
+     */
     public static RedstoneAPI INSTANCE() {
         if (apiInstance == null) {
             throw new RedstoneAPIException("API is currently not loaded!");
