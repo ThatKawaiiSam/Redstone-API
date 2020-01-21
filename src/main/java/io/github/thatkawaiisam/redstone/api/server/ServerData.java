@@ -10,19 +10,29 @@ import java.util.UUID;
 @Getter @Setter
 public class ServerData {
 
-    private int onlinePlayers, maxPlayers;
+    private int maxPlayers;
     private double tps;
     private ServerState state;
     private Set<UUID> whitelistedPlayers;
+    private Set<UUID> onlinePlayers;
 
     /**
      * Server Data class.
      */
     public ServerData() {
-        this.onlinePlayers = 0;
         this.maxPlayers = 0;
         this.tps = 20;
         this.state = ServerState.ONLINE;
         this.whitelistedPlayers = new HashSet<>();
+        this.onlinePlayers = new HashSet<>();
+    }
+
+    /**
+     * Gets the amount of people online on a specific Redstone Server.
+     *
+     * @return amount online.
+     */
+    public int getAmountOnline() {
+        return onlinePlayers.size();
     }
 }
