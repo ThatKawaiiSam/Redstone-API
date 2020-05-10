@@ -15,6 +15,16 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <dependencies>
+        <!-- Google Gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <finalName>Redstone-API-${git.commit.id.abbrev}</finalName>
         <defaultGoal>clean install</defaultGoal>

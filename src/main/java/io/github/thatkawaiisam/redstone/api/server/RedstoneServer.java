@@ -1,17 +1,17 @@
 package io.github.thatkawaiisam.redstone.api.server;
 
+import com.google.gson.JsonObject;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Getter @Setter
 public class RedstoneServer {
 
     private String serverID, ip;
     private List<String> groups;
+    private Map<String, JsonObject> metadata;
     private ServerData data;
     private int port;
     private long startTime;
@@ -25,6 +25,7 @@ public class RedstoneServer {
         this.serverID = serverID;
         this.data = new ServerData();
         this.groups = new ArrayList<>();
+        this.metadata = new HashMap<>();
     }
 
     /**
@@ -34,6 +35,16 @@ public class RedstoneServer {
      */
     public long getUptime() {
         return System.currentTimeMillis() - startTime;
+    }
+
+    /**
+     * Gets the Metadata of a specific identifier.
+     *
+     * @param identifier of metadata.
+     * @return metadata as JsonObject.
+     */
+    public JsonObject getMetaData(String identifier) {
+        return metadata.get(identifier);
     }
 
 }

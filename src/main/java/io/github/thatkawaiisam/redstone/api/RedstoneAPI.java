@@ -4,6 +4,7 @@ import io.github.thatkawaiisam.redstone.api.server.RedstoneServer;
 import io.github.thatkawaiisam.redstone.api.server.ServerState;
 
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 public abstract class RedstoneAPI {
@@ -135,5 +136,26 @@ public abstract class RedstoneAPI {
      * @param context of which the command is being sent to.
      */
     public abstract void sendNetworkCommand(String executor, String command, String context);
+
+    /**
+     * Add a Metadata Provider to the current Bukkit instance.
+     *
+     * @param provider object.
+     */
+    public abstract void addMetadataProvider(MetadataProvider provider);
+
+    /**
+     * Remove a Metadata Provider from the current Bukkit instance.
+     *
+     * @param provider object.
+     */
+    public abstract void removeMetadataProvider(MetadataProvider provider);
+
+    /**
+     * Gets the current MetadataProviders attached to current Bukkit instance.
+     *
+     * @return list of MetadataProviders.
+     */
+    public abstract Set<MetadataProvider> getCurrentMetadataProviders();
 
 }
