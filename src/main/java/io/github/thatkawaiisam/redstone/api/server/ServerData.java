@@ -13,8 +13,7 @@ public class ServerData {
     private int maxPlayers;
     private double tps;
     private ServerState state;
-    private Set<UUID> whitelistedPlayers;
-    private Set<UUID> onlinePlayers;
+    private Set<UUID> whitelistedPlayers, onlinePlayers;
 
     /**
      * Server Data class.
