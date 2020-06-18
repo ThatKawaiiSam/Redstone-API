@@ -10,4 +10,5 @@ public class RedstoneAPIException extends UnsupportedOperationException {
     public RedstoneAPIException(String message) {
         super(message);
     }
+
 }

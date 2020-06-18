@@ -2,7 +2,7 @@ package io.github.thatkawaiisam.redstone.api;
 
 import io.github.thatkawaiisam.redstone.api.server.RedstoneServer;
 
-public interface INetworkCommand {
+public interface NetworkCommand {
 
     /**
      * Network Command is a function that allows a command to be sent to any server

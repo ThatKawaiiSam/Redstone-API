@@ -34,4 +34,5 @@ public class ServerData {
     public int getAmountOnline() {
         return onlinePlayers.size();
     }
+
 }

@@ -32,4 +32,5 @@ public enum ServerState {
                 .filter(serverState -> serverState.ordinal == ordinal)
                 .findFirst().orElse(null);
     }
+
 }
